@@ -22,11 +22,12 @@ The final analysis was conducted across 3 different urban sites in the Eastern P
 - Revealed that **71.5% of pedestrian crossings were forced**, highlighting critical infrastructure hazards and the need for immediate smart-city interventions.
 
 ## 📸 Visualizing the Pipeline
-*(Add your YOLO / BoT-SORT tracking screenshots here from the `assets` folder)*
-
-## 🖥️ Repository Structure
-```text
-├── Simulation_Web/         # HTML/CSS/JS files for the interactive crosswalk simulation
-├── assets/                 # Screenshots and visualization of tracking algorithms
-├── scripts/                # Finalized Python scripts for trajectory extraction and SSM calculation
-└── README.md
+<p align="center">
+  <img src="assets/analysis_dashboard_site1.jpeg.jpeg" width="850" alt="Site 1 Analysis Dashboard">
+</p>
+<p align="center">
+  <img src="assets/analysis_dashboard_site2.jpeg.jpeg" width="850" alt="Site 2 Analysis Dashboard">
+</p>
+<p align="center">
+  <img src="assets/analysis_dashboard_site3.jpeg.jpeg" width="850" alt="Site 3 Analysis Dashboard">
+</p>
