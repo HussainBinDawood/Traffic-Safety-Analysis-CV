@@ -1,51 +1,32 @@
-# Vision-Based Pedestrian Safety Analysis using YOLOv8 🚦🚶‍♂️
+# 🚦 Vision-Based Modeling of Pedestrian-Vehicle Interactions & Near-Miss Analysis
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![YOLOv8](https://img.shields.io/badge/YOLO-v8-green)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-red)
-![Status](https://img.shields.io/badge/Status-Research%20Prototype-orange)
+🏆 **1st Place Award Winner - Best Senior Design Project (SDP)** | *Imam Abdulrahman Bin Faisal University*
 
-## 📌 Project Overview
-This repository contains the source code for my Senior Design Project (SDP) at **Imam Abdulrahman Bin Faisal University**. 
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![YOLOv11](https://img.shields.io/badge/YOLO-v11-yellow.svg)](https://github.com/ultralytics/ultralytics)
+[![BoT-SORT](https://img.shields.io/badge/Tracking-BoT--SORT-orange.svg)]()
+[![Simulation](https://img.shields.io/badge/Simulation-HTML5%2FJS-brightgreen.svg)]()
 
-The project aims to modernize **Traffic Safety Analysis** by automating the extraction of **Surrogate Safety Measures (SSMs)** from video data. Using Deep Learning (**YOLOv8**) and Computer Vision techniques, the system tracks interactions between vehicles and pedestrians at unsignalized mid-block crosswalks to quantify collision risks without waiting for historical crash data.
+## 📋 Project Overview
+This repository contains the finalized code and analysis pipeline for an automated, proactive traffic safety analysis system targeting unsignalized mid-block crosswalks. By bridging traditional traffic engineering with advanced computer vision, this project replaces subjective manual methodologies with robust, AI-driven trajectory extraction.
 
-## 🚀 Key Features
-* **Object Detection & Tracking:** Utilizes `YOLOv8` and `ByteTrack` for robust multi-object tracking of pedestrians and vehicles.
-* **Zone-Based Analysis:** Defines dynamic polygons to classify pedestrian behaviors (Waiting, Crossing, Jaywalking).
-* **Automated Speed Estimation:** Calculates vehicle and pedestrian speeds using pixel-to-meter calibration grids.
-* **Risk Assessment:** Computes critical safety metrics including:
-    * **TTA (Time-to-Accident):** Proximity risk calculation.
-    * **Gap Acceptance:** Analyzing pedestrian decision-making against oncoming vehicle gaps.
-    * **Traffic Conflicts:** Identifying near-miss scenarios.
+## ✨ Key Features
+- **Automated Trajectory Extraction:** Utilizes state-of-the-art **YOLOv11 / YOLOv8** for object detection and **BoT-SORT** for robust multi-object tracking.
+- **Surrogate Safety Measures (SSMs):** Computes complex safety metrics including Post-Encroachment Time (PET), Gap Acceptance, and conflict severity.
+- **Browser-Based Simulation:** An interactive web simulation calibrated with real-world extracted trajectories to test and validate targeted safety countermeasures.
 
-## 🛠️ Technical Stack
-* **Core Logic:** Python
-* **Computer Vision:** OpenCV, Supervision
-* **AI Model:** Ultralytics YOLOv8 (Custom trained weights)
-* **Data Processing:** NumPy, Pandas
+## 📊 Data Insights & Final Results
+The final analysis was conducted across 3 different urban sites in the Eastern Province, yielding a massive dataset of real-world interactions:
+- Successfully extracted and analyzed **508 complete crossing events** across multiple lanes.
+- Identified that **55.1% of interactions** posed high collision risks (PET < 2s).
+- Revealed that **71.5% of pedestrian crossings were forced**, highlighting critical infrastructure hazards and the need for immediate smart-city interventions.
 
-## 📊 Methodology
-The system processes video feeds through the following pipeline:
-1.  **Frame Pre-processing:** ROI cropping and perspective calibration.
-2.  **Inference:** Detecting agents (Pedestrians/Vehicles) using custom `.pt` models.
-3.  **Trajectory Tracking:** Assigning unique IDs to agents across frames.
-4.  **Logic Engine:**
-    * Mapping coordinates to real-world meters.
-    * Detecting lane encroachments.
-    * calculating `Delta-V` and `Distance-Gap`.
-5.  **Reporting:** Exporting a detailed `.csv` report for traffic engineering analysis.
+## 📸 Visualizing the Pipeline
+*(Add your YOLO / BoT-SORT tracking screenshots here from the `assets` folder)*
 
-## 📂 Output Sample
-The script generates a comprehensive CSV report containing:
-- `Ped_ID` & `Veh_ID`
-- `Veh_Headway` (sec)
-- `Veh_Dist_Gap` (m)
-- `Ped_Decision` (Accepted/Rejected gap)
-- `Ped_Wait_Time` (sec)
-
-## 👨‍💻 Author
-**Hussain Bin Dawood** *Transportation & Traffic Engineer | AI & Computer Vision Researcher* [LinkedIn Profile](ADD_YOUR_LINKEDIN_URL_HERE)
-
----
-*Note: This code is part of an academic research project and is calibrated for specific camera angles used in the study.*
+## 🖥️ Repository Structure
+```text
+├── Simulation_Web/         # HTML/CSS/JS files for the interactive crosswalk simulation
+├── assets/                 # Screenshots and visualization of tracking algorithms
+├── scripts/                # Finalized Python scripts for trajectory extraction and SSM calculation
+└── README.md
